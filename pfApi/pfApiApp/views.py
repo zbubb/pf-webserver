@@ -1,7 +1,9 @@
-from django.http import HttpResponse, JsonResponse
+from django.core.serializers import serialize
+from django.http import HttpResponse
+
+from .models import Label
 
 # Create your views here.
 def index(request):
-    test = {}
-    test['name'] = 'Hello World'
-    return JsonResponse(test)
+    data = serialize('json', Label.objects.all())
+    return HttpResponse(data, content_type='application/json')
