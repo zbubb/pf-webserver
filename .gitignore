@@ -1,2 +1,2 @@
-pfApi/db.sqlite3
-pfApi/pfApiApp/__pycache__/
+.pfApi/db.sqlite3
+.pfApi/pfApiApp/__pycache__/
