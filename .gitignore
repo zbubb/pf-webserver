@@ -1,2 +1,5 @@
 pfApi/db.sqlite3
+pfApi/pfApi/__init__.py
+pfApi/pfApi/__pycache__/
+pfApi/pfApiApp/__init__.py
 pfApi/pfApiApp/__pycache__/
