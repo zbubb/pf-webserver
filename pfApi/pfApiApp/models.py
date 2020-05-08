@@ -6,3 +6,21 @@ class Label(models.Model):
 
     def __str__(self):
         return self.label_text
+
+class MonthEntry(models.Model):
+    entryDate = models.DateField()
+    amount = models.FloatField()
+    isPositive = models.BooleanField()
+    label = models.ForeignKey(Label, on_delete=models.SET(0))
+
+    def __str__(self):
+        return self.label.label_text + " " + self.amount
+
+class NetWorthEntry(models.Model):
+    entryDate = models.DateField()
+    amount = models.FloatField()
+    isPositive = models.BooleanField()
+    label = models.ForeignKey(Label, on_delete=models.SET(0))
+
+    def __str__(self):
+        return self.label.label_text + " " + self.amount
