@@ -14,7 +14,7 @@ class MonthEntry(models.Model):
     label = models.ForeignKey(Label, on_delete=models.SET(0))
 
     def __str__(self):
-        return self.label.label_text + " " + self.amount
+        return self.label.label_text + " "
 
 class NetWorthEntry(models.Model):
     entryDate = models.DateField()
@@ -23,4 +23,4 @@ class NetWorthEntry(models.Model):
     label = models.ForeignKey(Label, on_delete=models.SET(0))
 
     def __str__(self):
-        return self.label.label_text + " " + self.amount
+        return self.label.label_text + " "
